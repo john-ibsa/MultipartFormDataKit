@@ -16,7 +16,7 @@ public struct Name {
             return .invalid(because: .cannotPercentEncode(debugInfo: filename))
         }
 
-        return .valid(Name(asPercentEncoded: percentEncodedString))
+        return .valid(Name(asPercentEncoded: percentEncodedString).stringByRemovingPercentEncoding)
     }
 
 
