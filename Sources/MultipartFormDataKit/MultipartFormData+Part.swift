@@ -93,7 +93,7 @@ extension MultipartFormData {
                     return .valid(
                         MultipartFormData.Part(
                             contentDisposition: ContentDisposition(
-                                name: name.removingPercentEncoding,
+                                name: name,
                                 filename: nil
                             ),
                             contentType: mimeType.map { mimeType in
